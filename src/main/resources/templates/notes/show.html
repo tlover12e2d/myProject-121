@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>Note Details</title>
+</head>
+<body>
+<h1>Note Details</h1>
+<div class="note-details">
+  <p class="note-id" th:text="${note.id}"></p>
+  <p class="note-content" th:text="${note.note}"></p>
+</div>
+<a th:href="@{/notes}">Back to Notes</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Notes</title>
+</head>
+<body>
+<h1>Notes</h1>
+<ul>
+    <th:block th:each="note : ${notes}">
+        <li>
+            <div class="note-entry">
+                <span class="note-id" th:text="${note.id}"></span>
+                <a class="note-title" th:href="@{/notes/{id}(id=${note.id})}" th:text="${note.note}"></a>
+            </div>
+        </li>
+    </th:block>
+</ul>
+<a th:href="@{/notes/new}">Add New Note</a>
+</body>
+</html>

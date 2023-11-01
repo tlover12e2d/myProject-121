@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>Edit Note</title>
+</head>
+<body>
+<h1>Edit Note</h1>
+<form action="/notes/{id}" method="post" th:object="${webNote}">
+  <div class="form-container">
+    <div class="form-group">
+      <label for="note">Note ID:</label>
+      <p class="note-id" th:text="${webNote.id}"></p>
+      <label for="note">Note:</label>
+      <input type="text" id="note" name="note" th:field="*{note}" required>
+    </div>
+    <button type="submit">Save Changes</button>
+  </div>
+</form>
+<a th:href="@{/notes}">Back to Notes</a>
+</body>
+</html>
